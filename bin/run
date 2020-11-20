@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby 
+
+require_relative '../lib/meals_cli'
+# require_relative '../lib/meals_cli'
+# require_relative '../lib/meals_cli'
+require 'rest-client'
+require 'json'
+require 'pry'
+MealsCli::CLI.new.greeting
