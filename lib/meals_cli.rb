@@ -4,4 +4,7 @@ require_relative './meals_cli/api.rb'
 require_relative './meals_cli/cli.rb'
 require_relative './meals_cli/meal.rb'
 
+require 'rest-client'
+require 'json'
+require 'pry'
 
