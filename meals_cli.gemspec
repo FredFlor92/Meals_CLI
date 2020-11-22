@@ -6,8 +6,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["freddyflorial@gmail.com"]
   spec.email         = ["freddyflorial@gmail.com"]
 
-  spec.summary       = %q{Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{Write a longer description or delete this line.}
+  spec.summary       = %q{Meals_cli accesses the API and gives you details of the list of menu items. Where the food is from, Youtube link, instuctions and the meal}
   spec.homepage      = "git@github.com:FredFlor92/Meals_CLI.git"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
