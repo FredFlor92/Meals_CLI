@@ -4,6 +4,7 @@ class MealsCli::CLI
 
     def greeting
         puts ""
+        puts "_________________________"
         puts "Welcome to Meals!"
         puts "To see meals, enter meals"
         puts "To exit enter exit"
@@ -34,7 +35,6 @@ class MealsCli::CLI
            # binding.pry
         end 
         puts ""
-        puts ""
         puts "Based on the list above select the meal that you would you like details about:"
         #enter comma
         input = gets.strip.downcase
@@ -63,8 +63,8 @@ class MealsCli::CLI
         puts ""
         puts " Instructions: 1. #{meal.strInstructions}"
         puts ""
-        puts "Select meals to return to the list"
-        puts "When complete plese input exit"
+        puts "Input meals to return to the list"
+        puts "When complete please input exit"
         menu
     end
 
