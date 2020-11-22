@@ -43,16 +43,25 @@ class MealsCli::CLI
     end 
     
     def meal_selection(meal)
-            menu = Meal.find_by_name(meal)
-            menu.each do |s|
-                binding.pry
-                puts " strMeal: #{s.strMeal}"
-                puts " strArea: #{s.strArea}"
-                puts " strYoutube: #{s.strYoutube}"
-                puts " strInstructions: #{s.strInstructions}"
-            end
+        s = Meal.find_by_name(meal)
+        if s
+            display_meal(s)
+        else
+            invalid_entry
+        end 
 
     end 
+
+    def display_meal(meal)
+        puts " Meal: #{meal.strMeal}"
+        puts " Area: #{meal.strArea}"
+        puts " Youtube: #{meal.strYoutube}"
+        puts " Instructions: #{meal.strInstructions}"
+        puts ""
+        puts "Select meals to return to the list"
+        puts "When complete plese input exit"
+        menu
+    end
 
     def goodbye
         puts "Thank you for visiting, Please come again!"
