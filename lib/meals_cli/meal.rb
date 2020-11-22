@@ -5,10 +5,6 @@ class Meal
 
     @@all = []
     def initialize(attributes)
-        # @name = name
-        # @area = area
-        # @youtube = youtube
-        # @instructions = instructions
         attributes.each do |k, v|
             self.send(("#{k}="), v) if self.respond_to?("#{k}=")
         end

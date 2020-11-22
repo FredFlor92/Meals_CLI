@@ -35,11 +35,12 @@ class MealsCli::CLI
         end 
         puts ""
         puts ""
-        puts "Which meals would you like details about:"
+        puts "Based on the list above select the meal that you would you like details about:"
         #enter comma
         input = gets.strip.downcase
          
         meal_selection(input)
+        puts ""
     end 
     
     def meal_selection(meal)
@@ -53,10 +54,14 @@ class MealsCli::CLI
     end 
 
     def display_meal(meal)
+        puts ""
         puts " Meal: #{meal.strMeal}"
-        puts " Area: #{meal.strArea}"
-        puts " Youtube: #{meal.strYoutube}"
-        puts " Instructions: #{meal.strInstructions}"
+        puts ""
+        puts " Area created: #{meal.strArea}"
+        puts ""
+        puts " Youtube link: #{meal.strYoutube}"
+        puts ""
+        puts " Instructions: 1. #{meal.strInstructions}"
         puts ""
         puts "Select meals to return to the list"
         puts "When complete plese input exit"
