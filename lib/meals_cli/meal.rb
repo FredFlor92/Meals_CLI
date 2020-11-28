@@ -1,13 +1,22 @@
 class Meal
 
     
-    attr_accessor :strMeal, :strArea, :strYoutube, :strInstructions
+    attr_accessor :strMeal, :strArea, :strYoutube, :strInstructions, :strIngredients
 
     @@all = []
     def initialize(attributes)
-        attributes.each do |k, v|
-            self.send(("#{k}="), v) if self.respond_to?("#{k}=")
+        attributes.each do |key, value|
+            self.send(("#{key}="), value) if self.respond_to?("#{key}=")
         end
+        ingredients = ""
+        (1..20).each do |n|
+          if attributes["strIngredient"+n.to_s].is_a?(String) && !attributes["strIngredient"+n.to_s].empty?
+            ingredients.concat(attributes["strIngredient"+n.to_s]).concat(", ")
+          end
+        end
+      
+      	self.send("strIngredients=", ingredients)
+         
         save
     end
 

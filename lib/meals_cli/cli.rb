@@ -47,8 +47,10 @@ class MealsCli::CLI
         s = Meal.find_by_name(meal)
         if s
             display_meal(s)
+        elsif meal == "exit"
+            goodbye
         else
-            invalid_entry
+            invalid_meal_entry
         end 
 
     end 
@@ -61,6 +63,8 @@ class MealsCli::CLI
         puts ""
         puts " Youtube link: #{meal.strYoutube}"
         puts ""
+        puts "Ingredients list #{meal.strIngredients}"
+        puts ""
         puts " Instructions: 1. #{meal.strInstructions}"
         puts ""
         puts "Input meals to return to the list"
@@ -70,10 +74,18 @@ class MealsCli::CLI
 
     def goodbye
         puts "Thank you for visiting, Please come again!"
+        exit
     end 
 
     def invalid_entry
         puts "invalid entry, try again"
         menu
     end 
+
+    def invalid_meal_entry
+        puts "That meal doesn't exist, please put a new one"
+        puts ""
+        meals_list
+    end
+
  end
