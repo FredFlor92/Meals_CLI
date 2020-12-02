@@ -31,7 +31,7 @@ class MealsCli::CLI
     
     def meals_list
         Meal.all.each_with_index do |meal, index|
-            puts "#{index + 1}. #{meal.strMeal}"
+            puts "#{index + 1}. #{meal.strMeal}."
            # binding.pry
         end 
         puts ""
@@ -63,7 +63,7 @@ class MealsCli::CLI
         puts ""
         puts " Youtube link: #{meal.strYoutube}"
         puts ""
-        puts "Ingredients list #{meal.strIngredients}"
+        puts "Ingredient list:  #{meal.strIngredients}"
         puts ""
         puts " Instructions: 1. #{meal.strInstructions}"
         puts ""
